@@ -1,0 +1,140 @@
+@import "./reset";
+@import "font-awesome-sprockets";
+@import "./font-awesome";
+@import "config/colors";
+@import "modules/user";
+@import "modules/flash";
+
+.wrapper{
+  .header{
+    height:100px;
+    width:100vw;
+    position:fixed;
+    z-index: 10;
+    display:flex;
+    .title{
+      width: 33%;
+      text-align: center;
+      line-height: 100px;
+      font-size:50px;
+      text-decoration: none;
+      color:white;
+      background-color: $mediumblue;
+    }
+    .form{
+      width: 34%;
+      background-color: $blue;
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      &__input{
+        width:300px;
+        height:40px;
+        background-color: white;
+       
+      }
+    }
+    .user{
+      width: 33%;
+      background-color: $light_blue;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      &__name{
+        font-size: 50px;
+
+      }
+      &__edit{
+        padding-left:10px;
+        font-size: 50px;
+      }
+    }
+  }
+
+  .views{
+    display:flex;
+    .side-view{
+      width:300px;
+      height:calc(100vh - 100px);
+      padding-top:100px;
+      position:fixed;
+      z-index: 9;
+      .follow-user{
+        height:50%;
+        background-color: $alert_orange;
+        &__image{
+          background-color: white;
+          width:250px;
+          height: 250px;
+          margin:20px;
+        }
+      }
+      .follow-car{
+        height:50%;
+        background-color: $crimson;
+        &__image{
+          background-color: white;
+          width:250px;
+          height: 250px;
+          margin:20px;
+        }
+      }
+    }
+    .main-view{
+      width:100vw;
+      height:100vh;
+      padding:200px 400px;
+      background-color: $light_gray;
+      display:flex;
+      position:relative;
+
+      .photo-image{
+        width:170px;
+        height:170px;
+        opacity: 0.5;
+        position: absolute;
+      }
+
+      .area1{
+        background-color: red;
+        top:500px;
+        left:320px;
+      }
+      .area2{
+        background-color: orange;
+        top:100px;
+        left:330px;
+      }
+      .area3{
+        background-color: yellow;
+        top:600px;
+        left:900px;
+      }
+      .area4{
+        background-color: greenyellow;
+        top:100px;
+        left:900px;
+      }
+      .area5{
+        background-color: green;
+        top:300px;
+        left:1200px;
+      }
+      .area6{
+        background-color: blue;
+        top:650px;
+        left:1350px;
+      }
+      .area7{
+        background-color: midnightblue;
+        top:950px;
+        left:1050px;
+      }
+      .area8{
+        background-color: purple;
+        top:850px;
+        left:550px;
+      }
+    }
+  }
+}
