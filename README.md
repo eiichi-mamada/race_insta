@@ -14,6 +14,7 @@
 |------|----|-------|
 |image|text|null: false|
 |text|test||
+|timestamps|timestamp|null: false|
 |user_id|integer|null: false foreign_key: true|
 |area_id|integer|null: false foreign_key: true|
 |car_id|integer|null: false foreign_key: true|
@@ -28,8 +29,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
+|timestamps|timestamp|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |post_id|integer|null: false, foreign_key: true|
+
 ### Association
 - belongs_to :user
 - belongs_to :post
