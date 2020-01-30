@@ -1,16 +1,14 @@
 .header
   .title
-    = link_to "#", class: "title" do
+    = link_to root_path, class: "title" do
       %p.title__name
         = RaceInsta
   .form
     .form__input
   -if user_signed_in?
     .user
-      = link_to "eiich", "#",class: "user__name btn"
+      = link_to current_user.name, current_user, class: "user__name btn"
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'user__edit btn'
-      -# .user__name eiichi
-      -# .user__edit ログアウト
   -else
     .user
       = link_to "ログイン", new_user_session_path, class: 'user__name btn'

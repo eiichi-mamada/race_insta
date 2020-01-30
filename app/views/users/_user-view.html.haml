@@ -1,0 +1,22 @@
+.user-show
+  .profile
+    .profile__icon
+    .profile__data
+      .profile__data__main
+        %p.profile__data__main--name 
+          = link_to edit_user_path(current_user), class: "profile__data__main--name" do
+            = current_user.name
+            .profile__data__main--edit
+              = icon('fas', 'user-cog fa-2x',  class: "profile__data__main--edit")
+              %span<>
+      = link_to "#", class: "profile__data__post btn" do
+        = "投稿"
+      .profile__data__follow
+        .profile__data__follow--users follow users
+        .profile__data__follow--cars follow cars
+  .user-posts
+    .user-posts__user-image
+    %ul.user-posts__data
+      %li.user-post__data__time 日付：2020年1月30日
+      %li.user-post__data__erea エリア：erea1
+      %li.user-post__data__car_number カーナンバー：#100
