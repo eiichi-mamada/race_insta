@@ -40,13 +40,28 @@
       display:flex;
       align-items: center;
       justify-content: center;
+
+      .btn{
+        background-color: orange;
+        padding:5px;
+        font-size: 30px;
+        text-decoration: none;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 4px 4px;
+      }
+      .btn:active {
+        box-shadow: none;
+        position: relative;
+        top:4px;
+        left:4px;
+      }
+
       &__name{
-        font-size: 50px;
 
       }
       &__edit{
-        padding-left:10px;
-        font-size: 50px;
+        margin-left:50px;
       }
     }
   }
