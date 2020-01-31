@@ -9,7 +9,7 @@
             .profile__data__main--edit
               = icon('fas', 'user-cog fa-2x',  class: "profile__data__main--edit")
               %span<>
-      = link_to "#", class: "profile__data__post btn" do
+      = link_to new_post_path, class: "profile__data__post btn" do
         = "投稿"
       .profile__data__follow
         .profile__data__follow--users follow users

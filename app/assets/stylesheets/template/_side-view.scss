@@ -1,0 +1,31 @@
+.wrapper{
+  .views{
+    .side-view{
+      width:300px;
+      height:calc(100vh - 100px);
+      padding-top:100px;
+      position:fixed;
+      z-index: 9;
+      .follow-user{
+        height:50%;
+        background-color: $alert_orange;
+        &__image{
+          background-color: white;
+          width:250px;
+          height: 250px;
+          margin:20px;
+        }
+      }
+      .follow-car{
+        height:50%;
+        background-color: $crimson;
+        &__image{
+          background-color: white;
+          width:250px;
+          height: 250px;
+          margin:20px;
+        }
+      }
+    }
+  }
+}
