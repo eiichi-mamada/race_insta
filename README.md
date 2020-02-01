@@ -14,6 +14,8 @@
 |------|----|-------|
 |image|text|null: false|
 |text|test||
+|car_number|string||
+|area_number|string||
 |timestamps|timestamp|null: false|
 |user_id|integer|null: false foreign_key: true|
 |area_id|integer|null: false foreign_key: true|
