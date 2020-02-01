@@ -1,5 +1,87 @@
 .wrapper{
-  .user-show{
-
+  .views{
+    .new-post{
+      margin:150px 400px;
+      width:100vw;
+      height:100vh;
+      background-color: yellow;
+      .form-post{
+        &__title{
+          font-size:50px;
+          text-align: center;
+        }
+        &__mask{
+          width:400px;
+          height:400px;
+          background-color: yellowgreen;
+          position:relative;
+          margin: 0 auto;
+          .hidden{
+            display: none;
+          }
+          &--image{
+            position: absolute;
+            top:140px;
+            left:140px;
+          }
+          .icon{
+            cursor: pointer;
+          }
+        }
+        &__areas{
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          .label{
+            display:block;
+            font-size:30px;
+          }
+          .area_number{
+            margin:10px;
+            width:50px;
+            height:40px;
+            font-size:30px;
+            text-align: center;
+          }
+        }
+        &__cars{
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          .label{
+            display:block;
+            font-size:30px;
+          }
+          .car_number{
+            margin:10px;
+            width:300px;
+            height:40px;
+            font-size:30px;
+          }
+        }
+        .input_text{
+          width:80%;
+          height:80px;
+          margin:10px 80px;
+        }
+        .submit-btn{
+          width:100px;
+          height:50px;
+          font-size:30px;
+          background-color: $light_blue;
+          color:white;
+          border: 1px solid black;
+          border-radius: 10px;
+          box-shadow: 4px 4px 0 black;
+          margin-left:300px;
+        }
+        .submit-btn:active {
+          box-shadow: none;
+          position: relative;
+          top:4px;
+          left:4px;
+        }
+      }
+    }
   }
 }
