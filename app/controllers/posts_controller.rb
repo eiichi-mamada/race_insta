@@ -10,9 +10,8 @@ class PostsController < ApplicationController
   end
   
   def create
-    binding.pry
     Post.create(post_params)
-    redirect_to current_user
+    redirect_to current_user, notice: '投稿されました'
   end
 
 
