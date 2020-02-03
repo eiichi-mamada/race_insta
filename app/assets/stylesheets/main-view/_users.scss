@@ -65,20 +65,16 @@
       }
     }
     .user-posts{
-      height:300px;
-      width:80vh;
+      height:500px;
+      width:80vw;
       background-color: white;
-      margin: 0 auto;
+      margin: 0 50px;
       display:flex;
-      align-items:center;
-      &__user-image{
-        height:250px;
-        width:250px;
-        background-color: yellow;
-        margin: auto 100px;
-      }
-      &__data{
-        font-size:20px;
+      flex-wrap:wrap;
+      &--image{
+        height:150px;
+        width:150px;
+        margin:20px;
       }
     }
   }

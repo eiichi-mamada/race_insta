@@ -14,10 +14,14 @@ class PostsController < ApplicationController
     redirect_to current_user, notice: '投稿されました'
   end
 
+  def show
+  end
+  
+
 
   private
   def post_params
-    params.permit(:image, :text, :car_number, :area_number)
+    params.permit(:image, :text, :car_number, :area_number).merge(user_id: current_user.id)
   end
 
   def move_to_index
