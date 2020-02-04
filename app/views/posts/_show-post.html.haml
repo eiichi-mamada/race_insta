@@ -1,0 +1,28 @@
+.show-posts
+  .show-posts__post
+    .show-posts__post--image{style: "background-image: url(#{@post.image.url}); background-size: contain"}
+      .more
+        %span= image_tag 'arrow_top.png'
+        %ul.more_list
+          %li
+            = link_to post_path(@post.id), method: :delete do
+              削除
+          %li
+            = link_to "#" do
+              編集
+              
+    %ul.show-posts__post__data
+      %li.show-posts__post__data--data_list 
+        = @post.user.name
+      %li.show-posts__post__data--data_list 
+        = @post.area_number
+      %li.show-posts__post__data--data_list 
+        = @post.car_number
+    %p.show-posts__post__text
+      = @post.text
+  %p.comment = テストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキスト
+  .form-comment
+    = form_with url: "#", class: "form-comment", local: true  do |f|
+      .form-comment__mask
+        = f.text_field :comment, class: "form-comment__mask--comment-text", placeholder: "type a comment"
+        = f.submit 'Send', class: 'form-comment__mask--submit-btn'
