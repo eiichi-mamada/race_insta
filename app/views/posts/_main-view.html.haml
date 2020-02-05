@@ -1,12 +1,9 @@
 .main-view
       %img{alt: "motegi", height: "800", src: "/assets/motegi_map.jpg", width: "1100"}
-      .photo-image.area1
-            %img{alt: "area1",height: "170px", src: @posts[1].image, width: "170px"}
-      .photo-image.area2 area2
-      .photo-image.area3 area3
-      .photo-image.area4 area4
-      .photo-image.area5 area5
-      .photo-image.area6 area6
-      .photo-image.area7 area7
-      .photo-image.area8 area8
-
+            - 1.upto(8) do |i|
+                  %div{class: "photo-image area#{i}"}
+                        = link_to area_path(i) do
+                              -if @posts.find_by(area_id: i).nil?
+                                    = image_tag "/assets/no_image.png", size: "170x170", alt:"no_image"
+                              -else
+                                    = image_tag @posts.find_by(area_id: i).image.url, size: "170x170", alt: "area#{i}"
