@@ -10,12 +10,11 @@
           %li
             = link_to "#" do
               編集
-              
     %ul.show-posts__post__data
       %li.show-posts__post__data--data_list 
         = @post.user.name
       %li.show-posts__post__data--data_list 
-        = @post.area_number
+        = @post.area_id
       %li.show-posts__post__data--data_list 
         = @post.car_number
     %p.show-posts__post__text

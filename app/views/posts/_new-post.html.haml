@@ -1,5 +1,5 @@
 .new-post
-  = form_with url: posts_path, method: :post, class: "form-post", local: true  do |f|
+  = form_with model: @posts , class: "form-post", local: true  do |f|
     %h1.form-post__title 投稿する 
     .form-post__mask
       = f.label :image, class: 'form-post__mask--image' do
@@ -7,7 +7,7 @@
         = icon('fas', 'image fa-8x', class: 'icon')
     .form-post__areas
       = f.label "area(?):", class: "label"
-      = f.text_field :area_number, class: 'area_number', placeholder: '?'
+      = f.text_field :area_id, class: 'area_number', placeholder: '?'
     .form-post__cars
       = f.label "car number(#???):", class: "label"
       = f.text_field :car_number, class: 'car_number', placeholder: '#???'

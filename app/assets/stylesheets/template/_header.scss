@@ -35,13 +35,13 @@
       justify-content: center;
 
       .btn{
-        background-color: orange;
         padding:5px;
-        font-size: 30px;
+        font-size: 25px;
         text-decoration: none;
         border: 1px solid black;
         border-radius: 10px;
         box-shadow: 4px 4px;
+        color: black;
       }
       .btn:active {
         box-shadow: none;
@@ -50,9 +50,11 @@
         left:4px;
       }
       &__name{
+        background-color: orange;
       }
       &__edit{
         margin-left:50px;
+        background-color: orange;
       }
     }
   }
