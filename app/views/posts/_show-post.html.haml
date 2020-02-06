@@ -19,9 +19,20 @@
         = @post.car_number
     %p.show-posts__post__text
       = @post.text
-  %p.comment = テストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキストテストテキスト
+  .comments
+  %h4 ＜コメント一覧＞
+  - if @comments
+    - @comments.each do |comment|
+      %p
+        %strong
+          = link_to comment.user.name, "#"
+        = comment.text  
   .form-comment
-    = form_with url: "#", class: "form-comment", local: true  do |f|
+    = form_with model: [@post, @comment], class: "form-comment", local: true  do |form|
       .form-comment__mask
-        = f.text_field :comment, class: "form-comment__mask--comment-text", placeholder: "type a comment"
-        = f.submit 'Send', class: 'form-comment__mask--submit-btn'
+        - if current_user
+          = form.text_area :text, class: "form-comment__mask--comment-text", placeholder: "コメントする", rows: "1"
+          = form.submit "SEND", class: 'form-comment__mask--submit-btn'
+        - else
+          %strong
+            %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
