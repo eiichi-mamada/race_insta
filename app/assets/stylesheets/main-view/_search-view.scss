@@ -1,0 +1,19 @@
+.wrapper{
+  .views{
+    .search-view{
+      padding:200px 150px 150px 300px;
+      width:100vw;
+      height:100vh;
+      .contents{
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-wrap: wrap;
+        background-color: gray;
+        &__content{
+          margin:20px;
+        }
+      }
+    }
+  }
+}

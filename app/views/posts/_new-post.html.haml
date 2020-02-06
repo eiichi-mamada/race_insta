@@ -11,8 +11,5 @@
     .form-post__cars
       = f.label "car number(#???):", class: "label"
       = f.text_field :car_number, class: 'car_number', placeholder: '#???'
-
-    %br
     = f.text_area :text, class: 'input_text', placeholder: 'type a message'
-    %br
     = f.submit 'Send', class: 'submit-btn'

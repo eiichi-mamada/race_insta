@@ -1,7 +1,7 @@
 .wrapper{
   .show-posts{
-    width:100vw;
-    height:100vh;
+    width:100%;
+    height:100%;
     margin:100px 0 0 300px;
     background-color: $light_gray;
     &__post{
@@ -70,8 +70,6 @@
       }
     }
   }
-
-
   .comment{
     width: 65vw;
     margin: 0 40px;
@@ -94,6 +92,7 @@
         border: 1px solid black;
         border-radius: 10px;
         box-shadow: 4px 4px;
+        margin-left:500px;
       }
       &--submit-btn:active {
         box-shadow: none;

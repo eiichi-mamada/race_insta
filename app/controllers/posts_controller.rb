@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
 
   def new
@@ -33,6 +33,10 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     post.destroy
     redirect_to current_user, notice: '投稿が削除されました'
+  end
+
+  def search
+    @posts = Post.search(params[:i]).order("created_at DESC").page(params[:page]).per(6)
   end
 
 

@@ -1,0 +1,6 @@
+.search-view
+  .contents
+    - @posts.each do |post|
+      = link_to post_path(post.id) do
+        = image_tag post.image.url, class: "contents__content", size:"400x400"
+  = paginate(@posts)
