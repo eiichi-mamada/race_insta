@@ -1,7 +1,7 @@
 .wrapper{
   .views{
     .search-view{
-      padding:200px 150px 150px 300px;
+      padding:200px 50px 150px 300px;
       width:100vw;
       height:100vh;
       .contents{
@@ -11,7 +11,13 @@
         flex-wrap: wrap;
         background-color: gray;
         &__content{
-          margin:20px;
+          margin:10px;
+          width: calc(90% / 3);
+          height: calc(90% /2);
+          &--image{
+            width:100%;
+            height:100%;
+          }
         }
       }
     }

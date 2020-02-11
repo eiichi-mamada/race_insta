@@ -39,13 +39,17 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params[:i]).order("created_at DESC").page(params[:page]).per(6)
+    redirect_to root_path if params[:keyword] == ""
+
+    # @posts = Post.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(6)
+    posts = Post.order("created_at DESC")
+    @posts = posts.search(params[:keyword])
   end
 
 
   private
   def post_params
-    params.require(:post).permit(:image, :text, :car_number, :area_id).merge(user_id: current_user.id)
+    params.require(:post).permit(:image, :text, :area_id, car_ids: []).merge(user_id: current_user.id)
   end
 
   def move_to_index

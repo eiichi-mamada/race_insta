@@ -1,8 +1,10 @@
 .wrapper{
   .views{
+    width:90vw;
+    height:100%;
     .new-post{
       margin:150px 0 0 300px;
-      width:70%;
+      width:100%;
       height:100%;
       background-color: yellow;
       .form-post{
@@ -11,8 +13,8 @@
           text-align: center;
         }
         &__mask{
-          width:400px;
-          height:400px;
+          width:300px;
+          height:300px;
           background-color: yellowgreen;
           position:relative;
           margin: 0 auto;
@@ -21,8 +23,8 @@
           }
           &--image{
             position: absolute;
-            top:140px;
-            left:140px;
+            top:75px;
+            left:80px;
           }
           .icon{
             cursor: pointer;
@@ -33,7 +35,6 @@
           align-items: center;
           justify-content: center;
           .label{
-            display:block;
             font-size:30px;
           }
           .area_number{
@@ -44,10 +45,15 @@
             text-align: center;
           }
         }
+        .label{
+          font-size:30px;
+        }
         &__cars{
           display:flex;
           align-items: center;
-          justify-content: center;
+          flex-wrap: wrap;
+          font-size:20px;
+          margin:10px;
           .label{
             display:block;
             font-size:30px;
@@ -59,28 +65,32 @@
             font-size:30px;
           }
         }
-        .input_text{
-          width:80%;
-          height:80px;
-          margin:10px 80px;
+        &__input{
+          .input_text{
+            width:80%;
+            height:80px;
+            margin:10px 80px;
+            display:block;
+          }
+          .submit-btn{
+            width:100px;
+            height:50px;
+            font-size:30px;
+            background-color: $light_blue;
+            color:white;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 4px 4px 0 black;
+            margin-left:600px;
+          }
+          .submit-btn:active {
+            box-shadow: none;
+            position: relative;
+            top:4px;
+            left:4px;
+          }
         }
-        .submit-btn{
-          width:100px;
-          height:50px;
-          font-size:30px;
-          background-color: $light_blue;
-          color:white;
-          border: 1px solid black;
-          border-radius: 10px;
-          box-shadow: 4px 4px 0 black;
-          margin-left:600px;
-        }
-        .submit-btn:active {
-          box-shadow: none;
-          position: relative;
-          top:4px;
-          left:4px;
-        }
+
       }
     }
   }
