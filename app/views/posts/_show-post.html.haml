@@ -16,7 +16,8 @@
       %li.show-posts__post__data--data_list 
         = @post.area_id
       %li.show-posts__post__data--data_list 
-        = @post.car_number
+        - @post.cars.each do |number|
+          = number.car_number
     %p.show-posts__post__text
       = @post.text
   .comments

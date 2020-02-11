@@ -5,7 +5,7 @@
         = RaceInsta
   .form
     = form_with(url: search_posts_path, local: true, method: :get, class: "form__search") do |form|
-      = form.text_field :i, placeholder: "検索する", class: "form__search--input"
+      = form.text_field :keyword, placeholder: "検索する", class: "form__search--input"
       = form.submit "検索", class: "form__search--btn"
   -if user_signed_in?
     .user
