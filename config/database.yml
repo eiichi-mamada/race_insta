@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: race_insta_production
-  username: race_insta
-  password: <%= ENV['RACE_INSTA_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
