@@ -11,29 +11,35 @@
             = link_to "#" do
               編集
     %ul.show-posts__post__data
-      %li.show-posts__post__data--data_list 
+      %li.show-posts__post__data--data_list
+        %p 投稿者：
         = @post.user.name
-      %li.show-posts__post__data--data_list 
+      %li.show-posts__post__data--data_list
+        %p AREA：
         = @post.area_id
-      %li.show-posts__post__data--data_list 
+      %li.show-posts__post__data--data_list
+        %p カーナンバー：
         - @post.cars.each do |number|
+
           = number.car_number
     %p.show-posts__post__text
       = @post.text
   .comments
-  %h4 ＜コメント一覧＞
-  - if @comments
-    - @comments.each do |comment|
-      %p
-        %strong
-          = link_to comment.user.name, "#"
-        = comment.text  
-  .form-comment
-    = form_with model: [@post, @comment], class: "form-comment", local: true  do |form|
-      .form-comment__mask
-        - if current_user
-          = form.text_area :text, class: "form-comment__mask--comment-text", placeholder: "コメントする", rows: "1"
-          = form.submit "SEND", class: 'form-comment__mask--submit-btn'
-        - else
+    %h4 ＜コメント一覧＞
+    - if @comments
+      - @comments.each do |comment|
+        .comments__comment
           %strong
-            %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+            = link_to comment.user.name, "#"
+            %span :
+          %p
+            = comment.text  
+    .form-comment
+      = form_with model: [@post, @comment], class: "form-comment", local: true  do |form|
+        .form-comment__mask
+          - if current_user
+            = form.text_area :text, class: "form-comment__mask--comment-text", placeholder: "コメントする", rows: "1"
+            = form.submit "SEND", class: 'form-comment__mask--submit-btn'
+          - else
+            %strong
+              %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※

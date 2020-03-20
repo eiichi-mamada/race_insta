@@ -34,6 +34,7 @@ class PostsController < ApplicationController
 
   def destroy
     post = Post.find(params[:id])
+    post.remove_image!
     post.destroy
     redirect_to current_user, notice: '投稿が削除されました'
   end

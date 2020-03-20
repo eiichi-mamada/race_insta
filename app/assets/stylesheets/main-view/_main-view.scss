@@ -3,7 +3,7 @@
     .main-view{
       width:100vw;
       height:100vh;
-      padding:200px 350px 150px 100px;
+      padding:200px 250px 150px 100px;
       background-color: $light_gray;
       display:flex;
       position:relative;
@@ -14,42 +14,34 @@
         border: 1px solid;
       }
       .area1{
-        background-color: red;
         top:500px;
         left:20px;
       }
       .area2{
-        background-color: orange;
         top:100px;
         left:70px;
       }
       .area3{
-        background-color: yellow;
         top:600px;
         left:600px;
       }
       .area4{
-        background-color: greenyellow;
         top:150px;
         left:610px;
       }
       .area5{
-        background-color: green;
         top:300px;
         left:1000px;
       }
       .area6{
-        background-color: blue;
         top:650px;
         left:1050px;
       }
       .area7{
-        background-color: midnightblue;
         top:930px;
         left:750px;
       }
       .area8{
-        background-color: purple;
         top:850px;
         left:300px;
       }
