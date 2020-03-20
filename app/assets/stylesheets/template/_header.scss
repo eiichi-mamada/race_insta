@@ -6,17 +6,17 @@
     z-index: 10;
     display:flex;
     .title{
+      background-color: $light_blue;
       width: 33%;
       text-align: center;
       line-height: 100px;
       font-size:50px;
       text-decoration: none;
       color:white;
-      background-color: $mediumblue;
     }
     .form{
       width: 34%;
-      background-color: $blue;
+      background-color: $light_blue;
       display:flex;
       justify-content:center;
       align-items: center;
